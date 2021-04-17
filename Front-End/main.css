@@ -1,0 +1,101 @@
+body {
+  background-color: #eee;
+}
+
+#app {
+  display: flex;
+}
+
+#app div {
+  background-color: #fff;
+  flex-grow: 1;
+  margin: 5px;
+  margin-top: 0;
+}
+
+#meals {
+  margin-left: 0;
+}
+
+#orders {
+  margin-right: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#submit {
+  background-color: #17495e;
+  color: #fff;
+  padding: 10px 15px;
+  border: solid 0px;
+  border-radius: 25px;
+  margin: 15px;
+  margin-left: 38px;
+}
+
+#submit:disabled {
+  background-color: #ccc;
+}
+
+#meals-list li {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #eee;
+}
+
+#app .form-main {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: solid #17495e;
+  padding-bottom: 30px;
+  box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.login-form p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-form input {
+  width: calc(100% - 10px);
+  height: 28px;
+  padding-left: 8px;
+  background-color: #dedede;
+  border: solid 0;
+  border-radius: 8px;
+  color: #424242;
+}
+
+.btn {
+  background-color: #17495e;
+  color: white;
+  border: solid 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #2e6279;
+}
+
+.block {
+  width: calc(100% - 2px);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
