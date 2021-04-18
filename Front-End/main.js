@@ -170,27 +170,32 @@ const renderRegister = () => {
   const registerTemplate = document.getElementById('register-template');
   document.getElementById('app').innerHTML = registerTemplate.innerHTML;
 
-  const registerForm = document.getElementById();
+  const registerForm = document.getElementById('register-form');
 
   registerForm.onsubmit = (e) => {
     e.preventDefault();
 
-    const nombre = document.getElementById('nombreR');
-    const apellido = document.getElementById('apellidoR');
-    const email = document.getElementById('emailR');
-    const password = document.getElementById('passwordR');
-    const send = document.getElementById('send-register');
+    const nombre = document.getElementById('nombreR').value;
+    const apellido = document.getElementById('apellidoR').value;
+    const email = document.getElementById('emailR').value;
+    const password = document.getElementById('passwordR').value;
 
-    send.addEventListener(
-      'click',
-      fetch('https://server2-jair-luna.vercel.app/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ nombre, apellido, email, password }),
-      })
-    );
+    const user = {
+      nombre: nombre,
+      apellido: apellido,
+      email: email,
+      password: password,
+    };
+
+    fetch('https://server2-jair-luna.vercel.app/api/auth/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }).then((x) => x.json());
+    alert('Now you have signed up, Log in with your new creadentials');
+    renderLogin();
   };
 };
 
