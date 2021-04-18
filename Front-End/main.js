@@ -119,6 +119,7 @@ const renderApp = () => {
   renderLogin();
 };
 
+//Shows login template and get the inputs value to Log into the app
 const renderLogin = () => {
   const loginTemplate = document.getElementById('login-template');
   document.getElementById('app').innerHTML = loginTemplate.innerHTML;
@@ -158,6 +159,38 @@ const renderLogin = () => {
         user = fetchedUser;
         renderOrders();
       });
+  };
+
+  const registerButton = document.getElementById('register-btn');
+  registerButton.addEventListener('click', renderRegister);
+};
+
+//Shows register template, register a new user
+const renderRegister = () => {
+  const registerTemplate = document.getElementById('register-template');
+  document.getElementById('app').innerHTML = registerTemplate.innerHTML;
+
+  const registerForm = document.getElementById();
+
+  registerForm.onsubmit = (e) => {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombreR');
+    const apellido = document.getElementById('apellidoR');
+    const email = document.getElementById('emailR');
+    const password = document.getElementById('passwordR');
+    const send = document.getElementById('send-register');
+
+    send.addEventListener(
+      'click',
+      fetch('https://server2-jair-luna.vercel.app/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ nombre, apellido, email, password }),
+      })
+    );
   };
 };
 

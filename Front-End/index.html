@@ -8,6 +8,7 @@
   <body>
     <div id="app"></div>
   </body>
+
   <template id="login-template">
     <div class="form-main">
       <p class="form-title">Inicia sesión</p>
@@ -22,6 +23,36 @@
         </div>
         <div>
           <button class="btn block">Enviar</button>
+        </div>
+        <div>
+          <button id="register-btn" class="btnR block">Registrarse</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <template id="register-template">
+    <div class="form-main">
+      <p class="form-title">Registrate</p>
+      <form class="register-form" id="register-form">
+        <div>
+          <p>Nombre</p>
+          <input type="text" id="nombreR" placeholder="Nombre" />
+        </div>
+        <div>
+          <p>Apellido</p>
+          <input type="text" id="apellidoR" placeholder="Apellido" />
+        </div>
+        <div>
+          <p>Email</p>
+          <input type="text" id="emailR" placeholder="Email" />
+        </div>
+        <div>
+          <p>Contraseña</p>
+          <input type="password" id="passwordR" placeholder="Contraseña" />
+        </div>
+        <div>
+          <button class="btn block" id="send-register">Enviar</button>
         </div>
       </form>
     </div>
