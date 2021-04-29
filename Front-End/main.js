@@ -197,6 +197,9 @@ const renderRegister = () => {
     alert('Now you have signed up, Log in with your new creadentials');
     renderLogin();
   };
+
+  const exit = document.getElementById('exit-btn');
+  exit.addEventListener('click', renderLogin);
 };
 
 const renderOrders = () => {

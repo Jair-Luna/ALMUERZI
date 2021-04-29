@@ -129,3 +129,10 @@ ul {
   cursor: pointer;
   background-color: #d4c855;
 }
+
+#exit-btn {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  z-index: 2;
+}
