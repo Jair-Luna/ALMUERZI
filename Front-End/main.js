@@ -162,13 +162,24 @@ const renderLogin = () => {
   };
 
   const registerButton = document.getElementById('register-btn');
-  registerButton.addEventListener('click', renderRegister);
+  const overlay = document.getElementById('overlay');
+  const popup = document.getElementById('popup');
+  const exit = document.getElementById('exit-register');
+
+  registerButton.addEventListener('click', function () {
+    overlay.classList.add('active');
+    renderRegister();
+  });
+
+  exit.addEventListener('click', function () {
+    overlay.classList.remove('active');
+  });
 };
 
-//Shows register template, register a new user
+//Shows register popup, register a new user
 const renderRegister = () => {
-  const registerTemplate = document.getElementById('register-template');
-  document.getElementById('app').innerHTML = registerTemplate.innerHTML;
+  // const registerTemplate = document.getElementById('register-template');
+  // document.getElementById('app').innerHTML = registerTemplate.innerHTML;
 
   const registerForm = document.getElementById('register-form');
 
@@ -197,9 +208,6 @@ const renderRegister = () => {
     alert('Now you have signed up, Log in with your new creadentials');
     renderLogin();
   };
-
-  const exit = document.getElementById('exit-btn');
-  exit.addEventListener('click', renderLogin);
 };
 
 const renderOrders = () => {

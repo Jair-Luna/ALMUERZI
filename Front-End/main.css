@@ -2,12 +2,19 @@ body {
   background-color: #eee;
 }
 
-#app {
+#app .container {
   display: flex;
 }
 
-#app div {
-  background-color: #fff;
+#app #meals {
+  background-color: #c3ddfa;
+  flex-grow: 1;
+  margin: 5px;
+  margin-top: 0;
+}
+
+#app #orders {
+  background-color: #f8b7b7;
   flex-grow: 1;
   margin: 5px;
   margin-top: 0;
@@ -21,8 +28,15 @@ body {
   margin-right: 0;
 }
 
-ul {
+#app ul {
+  padding: 10px 20px;
+}
+
+#app ul li {
   list-style-type: none;
+  border: solid 1px;
+  margin: 5px 0px;
+  padding: 5px 2px;
 }
 
 #submit {
@@ -48,6 +62,7 @@ ul {
 }
 
 #app .form-main {
+  background-color: #ffffff;
   max-width: 400px;
   margin: 0 auto;
   margin-top: 100px;
@@ -90,6 +105,20 @@ ul {
   background-color: #2e6279;
 }
 
+.btnR {
+  background-color: #dac511;
+  color: white;
+  border: solid 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+
+.btnR:hover {
+  cursor: pointer;
+  background-color: #d4c855;
+}
+
 .block {
   width: calc(100% - 2px);
 }
@@ -98,6 +127,34 @@ ul {
   text-align: center;
   font-size: 22px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay.active {
+  visibility: visible;
+}
+
+.popup {
+  background-color: #fff;
+  width: 600px;
+  padding: 5px 15px 15px 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: solid #17495e;
+  box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3);
 }
 
 .register-form input {
@@ -116,23 +173,12 @@ ul {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.btnR {
-  background-color: #dac511;
-  color: white;
-  border: solid 0;
-  border-radius: 5px;
-  padding: 10px 15px;
-  margin-top: 10px;
+.popup .exit-btn {
+  display: block;
+  text-align: right;
+  line-height: 16px;
 }
 
-.btnR:hover {
+#exit-btn:hover {
   cursor: pointer;
-  background-color: #d4c855;
-}
-
-#exit-btn {
-  position: absolute;
-  right: 10px;
-  top: 12px;
-  z-index: 2;
 }

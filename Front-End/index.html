@@ -24,60 +24,65 @@
         <div>
           <button class="btn block">Enviar</button>
         </div>
-        <div>
-          <button id="register-btn" class="btnR block">Registrarse</button>
-        </div>
       </form>
+      <div>
+        <button id="register-btn" class="btnR block">Registrarse</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+      <div class="popup" id="popup">
+        <i class="exit-btn" id="exit-register"
+          ><img
+            id="exit-btn"
+            src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/__geKiQnSG-.png"
+            width="24"
+            height="24"
+        /></i>
+        <p class="form-title">Registrate</p>
+        <form class="register-form" id="register-form">
+          <div>
+            <p>Nombre</p>
+            <input type="text" id="nombreR" placeholder="Nombre" />
+          </div>
+          <div>
+            <p>Apellido</p>
+            <input type="text" id="apellidoR" placeholder="Apellido" />
+          </div>
+          <div>
+            <p>Email</p>
+            <input type="email" id="emailR" placeholder="Email" />
+          </div>
+          <div>
+            <p>Contraseña</p>
+            <input type="password" id="passwordR" placeholder="Contraseña" />
+          </div>
+          <div>
+            <button class="btn block" id="send-register">Enviar</button>
+          </div>
+        </form>
+      </div>
     </div>
   </template>
 
-  <template id="register-template">
-    <div class="form-main">
-      <img
-        id="exit-btn"
-        src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/__geKiQnSG-.png"
-        width="24"
-        height="24"
-      />
-      <p class="form-title">Registrate</p>
-      <form class="register-form" id="register-form">
-        <div>
-          <p>Nombre</p>
-          <input type="text" id="nombreR" placeholder="Nombre" />
-        </div>
-        <div>
-          <p>Apellido</p>
-          <input type="text" id="apellidoR" placeholder="Apellido" />
-        </div>
-        <div>
-          <p>Email</p>
-          <input type="text" id="emailR" placeholder="Email" />
-        </div>
-        <div>
-          <p>Contraseña</p>
-          <input type="password" id="passwordR" placeholder="Contraseña" />
-        </div>
-        <div>
-          <button class="btn block" id="send-register">Enviar</button>
-        </div>
-      </form>
-    </div>
-  </template>
+  <template id="register-template"> </template>
 
   <template id="orders-view">
-    <div id="meals">
-      <ul id="meals-list">
-        <p>Cargando...</p>
-      </ul>
-      <form id="order">
-        <input id="meals-id" type="hidden" />
-        <button id="submit" disabled>Enviar</button>
-      </form>
-    </div>
-    <div id="orders">
-      <ul id="orders-list">
-        <p>Cargando...</p>
-      </ul>
+    <div class="container">
+      <div id="meals">
+        <ul id="meals-list">
+          <p>Cargando...</p>
+        </ul>
+        <form id="order">
+          <input id="meals-id" type="hidden" />
+          <button id="submit" disabled>Enviar</button>
+        </form>
+      </div>
+      <div id="orders">
+        <ul id="orders-list">
+          <p>Cargando...</p>
+        </ul>
+      </div>
     </div>
   </template>
   <script src="main.js"></script>
