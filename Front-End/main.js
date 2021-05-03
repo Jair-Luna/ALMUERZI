@@ -213,8 +213,20 @@ const renderRegister = () => {
 const renderOrders = () => {
   const ordersView = document.getElementById('orders-view');
   document.getElementById('app').innerHTML = ordersView.innerHTML;
+
   initializeForm();
   initializeData();
+
+  const logOutbtn = document.getElementById('logOut');
+  logOutbtn.addEventListener('click', logOut);
+};
+
+//Close session
+const logOut = () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  alert('Logging out. Press Ok to continue');
+  renderLogin();
 };
 
 //Call functions//
