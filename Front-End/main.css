@@ -1,5 +1,5 @@
 body {
-  background-color: #eee;
+  background-color: #c0c0c0;
 }
 
 #app .container {
@@ -47,6 +47,10 @@ body {
   border-radius: 25px;
   margin: 15px;
   margin-left: 38px;
+}
+
+#submit:hover {
+  cursor: pointer;
 }
 
 #submit:disabled {
@@ -117,6 +121,20 @@ body {
 .btnR:hover {
   cursor: pointer;
   background-color: #d4c855;
+}
+
+.btnL {
+  background-color: #ca0909;
+  color: white;
+  border: solid 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+
+.btnL:hover {
+  cursor: pointer;
+  background-color: #c52c2c;
 }
 
 .block {

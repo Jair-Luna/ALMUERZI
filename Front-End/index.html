@@ -69,22 +69,24 @@
 
   <!-- Orders View Template -->
   <template id="orders-view">
-    <div class="container">
-      <button id="logOut" class="btn">Log Out</button>
-      <div id="meals">
-        <ul id="meals-list">
-          <p>Cargando...</p>
-        </ul>
-        <form id="order">
-          <input id="meals-id" type="hidden" />
-          <button id="submit" disabled>Enviar</button>
-        </form>
+    <div>
+      <div class="container">
+        <div id="meals">
+          <ul id="meals-list">
+            <p>Cargando...</p>
+          </ul>
+          <form id="order">
+            <input id="meals-id" type="hidden" />
+            <button id="submit" disabled>Enviar</button>
+          </form>
+        </div>
+        <div id="orders">
+          <ul id="orders-list">
+            <p>Cargando...</p>
+          </ul>
+        </div>
       </div>
-      <div id="orders">
-        <ul id="orders-list">
-          <p>Cargando...</p>
-        </ul>
-      </div>
+      <button id="logOut" class="btnL block">Log Out</button>
     </div>
   </template>
   <script src="main.js"></script>

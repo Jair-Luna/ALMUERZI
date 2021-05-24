@@ -155,7 +155,7 @@ const renderLogin = () => {
       })
       .then((x) => x.json())
       .then((fetchedUser) => {
-        localStorage.setItem('user', JSON.stringify(fetchedUser));
+        localStorage.setItem('user', JSON.stringify(fetchedUser.email));
         user = fetchedUser;
         renderOrders();
       });
@@ -178,9 +178,6 @@ const renderLogin = () => {
 
 //Shows register popup, register a new user
 const renderRegister = () => {
-  // const registerTemplate = document.getElementById('register-template');
-  // document.getElementById('app').innerHTML = registerTemplate.innerHTML;
-
   const registerForm = document.getElementById('register-form');
 
   registerForm.onsubmit = (e) => {
